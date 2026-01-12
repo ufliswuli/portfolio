@@ -91,6 +91,13 @@ svg {
     z-index: 1000;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 2rem;
+}
+
 main section.navbar {
     position: absolute;
     top: 0;
@@ -122,6 +129,9 @@ main section.center h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
     color: #333;
+
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 main section.center p {
     font-family: 'Inter', sans-serif;
@@ -237,4 +247,148 @@ main section.center .container .box {
 }
 #frontendmentor {
     color: #458daa;
+}
+
+@media (max-width: 1024px) {
+    main section.center .container .box ul {
+        padding: 0;
+        gap: 0;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+    main section.center h1 {
+        font-size: 3rem;
+        max-width: 980px;
+    }
+
+    .switch {
+        top: 40px;
+        right: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    main section.navbar {
+        position: static;
+        margin-left: 2rem;
+        margin-top: 2rem;
+    }
+
+    main section.center #projects {
+        margin-top: 4rem;
+    }
+
+    main section.center .container {
+        align-items: start;
+        margin-left: 2rem;
+    }
+    main section.center .container .box {
+        flex-direction: column;
+        align-items: start;
+        gap: 0;
+    }
+    main section.center .container ul {
+        padding: 0;
+        margin: 0;
+        height: auto;
+    }
+
+    main section.center h1 {
+        font-size: 3rem;
+        max-width: 648px;
+        text-align: start;
+    }
+    main section.center p {
+        font-size: 1.2rem;
+        text-align: start;
+    }
+    
+    main section.navbar {
+        justify-content: start;
+        align-items: start;
+        top: 2rem;
+        left: 2rem;
+    }
+    main section.navbar nav ul {
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+    main section.navbar nav ul li a {
+        font-size: 1.2rem;
+    }
+
+    main section.footer {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    main section.center #projects {
+        flex-direction: row;
+        align-items: start;
+        justify-content: space-between;
+        max-width: 420px;
+    }
+    main section.center #projects ul li a {
+        overflow-wrap: break-word;
+        word-break: break-word;
+        font-size: 1rem;
+        max-width: 100%;
+    }
+    main section.center .container ul li {
+        overflow-wrap: break-word;
+        word-break: break-word;
+        font-size: 0.8rem;
+        max-width: 80%;
+    }
+    main section.center .container {
+        height: auto;
+    }
+    main section.center h1 {
+        font-size: 2.8rem;
+        max-width: 0px;
+    }
+    main section.center p {
+        font-size: 1.2rem;
+        text-align: start;
+    }
+    main section.navbar nav ul li a {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 420px) {
+    main section.center h1 {
+        font-size: 2.4rem;
+        max-width: 80%;
+    }
+    main section.center #projects {
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
+        max-width: 420px;
+    }
+    main section.center #projects ul li a {
+        overflow-wrap: break-word;
+        word-break: break-word;
+        font-size: 1rem;
+    }
+    main section.center .container ul li {
+        overflow-wrap: break-word;
+        word-break: break-word;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 320px) {
+    main section.center h1 {
+        font-size: 2.4rem;
+        width: 320px;
+    }
+    main section.center p {
+        text-align: start;
+    }
+    main section.navbar nav ul li a {
+        font-size: 1rem;
+    }
 }
