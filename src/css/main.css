@@ -1,0 +1,240 @@
+/* MAIN */
+
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Syriac+Western:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+@keyframes bg-loop {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+body {
+    background-color: #f5f5f5;
+    transition: background-color 0.3s ease-in-out;
+    background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png");
+    animation: bg-loop 120s linear infinite;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+a {
+    cursor: pointer;
+    transition: color 0.3s ease;
+    color: #007BFF;
+}
+
+/* BODY DARK MODE */
+
+body.dark-mode {
+    background-color: #121212;
+}
+body.dark-mode ul li {
+    color: #e0e0e0;
+}
+body.dark-mode main section.navbar nav ul li a {
+    color: #e0e0e0;
+}
+body.dark-mode main section.navbar nav ul li a:hover {
+    color: #1E90FF;
+}
+body.dark-mode main section.center h1, h2, h3, h4, h5, h6 {
+    color: #e0e0e0;
+}
+body.dark-mode main section.center p, span, div, li {
+    color: #aaaaaa;
+}
+body.dark-mode main section.center .container ul li {
+    color: #aaaaaa;
+}
+body.dark-mode main section.center button {
+    background-color: #f5f5f5;
+    color: #333333;
+}
+body.dark-mode #steamparty {
+    color: #4ea1c4;
+}
+body.dark-mode #portall {
+    color: #4cd37b;
+}
+body.dark-mode #moddb {
+    color: #e61e1e;
+}
+body.dark-mode #soundcloud {
+    color: #f16119;
+}
+body.dark-mode #frontendmentor {
+    color: #6dcdf3;
+}
+
+/*  */
+
+svg {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.switch {
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    z-index: 1000;
+}
+
+main section.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main section.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+main section.navbar nav ul li a {
+    text-decoration: none;
+    font-family: 'BBH Bartle', cursive;
+    font-size: 1rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+main section.navbar nav ul li a:hover {
+    color: #007BFF;
+}
+
+main section.center h1 {
+    font-family: 'BBH Bartle', cursive;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+main section.center p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    color: #666;
+    max-width: 600px;
+}
+main section.center button {
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.4rem;
+    font-family: 'Inter', sans-serif;
+    color: #f5f5f5;
+    background-color: #333;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+main section.center button:hover {
+    background-color: #007BFF;
+}
+
+
+main section.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+/* */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+main section.center .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    font-family: 'Noto Sans Syriac Western', sans-serif;
+
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+    transition: display 0.3s ease-in-out;
+}
+main section.center .container.active {
+    display: flex;
+}
+main section.center .container ul {
+    list-style: none;
+    margin-top: 2rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    height: 340px;
+}
+main section.center .container ul li {
+    font-size: 1.2rem;
+    color: #444;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: start;
+    max-width: 300px;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+main section.center .container ul li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-family: 'BBH Bartle', cursive;
+}
+main section.center .container ul li a:hover {
+    text-decoration: underline;
+}
+
+main section.center .container .box {
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+}
+
+#steamparty {
+    color: #2c6581;
+}
+#portall {
+    color: #187e4c;
+}
+#moddb {
+    color: #aa1616;
+}
+#soundcloud {
+    color: #d45c1f;
+}
+#frontendmentor {
+    color: #458daa;
+}
