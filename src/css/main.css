@@ -63,8 +63,8 @@ body.dark-mode main section.center button {
 body.dark-mode #steamparty {
     color: #4ea1c4;
 }
-body.dark-mode #portall {
-    color: #4cd37b;
+body.dark-mode #petzilla {
+    color: #1db985;
 }
 body.dark-mode #moddb {
     color: #e61e1e;
@@ -236,8 +236,8 @@ main section.center .container .box {
 #steamparty {
     color: #2c6581;
 }
-#portall {
-    color: #187e4c;
+#petzilla {
+    color: #0f6647;
 }
 #moddb {
     color: #aa1616;
